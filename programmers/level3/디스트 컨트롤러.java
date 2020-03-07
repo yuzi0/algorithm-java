@@ -1,42 +1,64 @@
 // https://programmers.co.kr/learn/courses/30/lessons/42627
-// 실패
 
 import java.util.Collections;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Comparator;
+import java.util.Arrays;
 
 class Solution {
     public int solution(int[][] jobs) {
+        List<Job> jobList = new ArrayList<>();
         List<Job> waitingJobs = new ArrayList<>();
-        int total_waiting_time = jobs[0][1];
-        int time = jobs[0][1];
         
-        for (int i = 1; i < jobs.length && waitingJobs.isEmpty();) {
-            // 해당 시간동안 들어온 작업 추가
-            while ( time >= jobs[i][0] || waitingJobs.isEmpty() ) {
-                Job job = new Job();
-                job.request_time = jobs[i][0];
-                job.task_time = jobs[i][1];
-                waitingJobs.add(job);
+        sortArray(jobs);
+        
+        int total_waiting_time = 0;
+        int time = jobs[0][0];
+
+        // jobList 초기화
+        for ( int[] job : jobs ) {
+            Job j = new Job();
+            j.request_time = job[0];
+            j.task_time = job[1];
+            
+            jobList.add(j);
+        }
+        
+        while ( !jobList.isEmpty() || !waitingJobs.isEmpty() ) {
+            Job j = new Job();
+            boolean chk = false;
+            
+            // 해당 시간까지 들어온 작업 추가
+            while ( !jobList.isEmpty() ) {
+                j = jobList.get(0);
+                if ( j.request_time > time ) break;
                 
-                if ( i >= jobs.length - 1 ) break; 
-                i++; 
+                waitingJobs.add(j);
+                jobList.remove(0);
             }
-            if ( i >= jobs.length - 1 ) i++;
-            
-            System.out.println(waitingJobs.toString());
-            
+
             // 정렬
-            Collections.sort(waitingJobs);
+            if (waitingJobs.size() != 0) {
+                Collections.sort(waitingJobs);
+            } else {
+                waitingJobs.add(jobList.get(0));
+                jobList.remove(0);
+                
+                chk = true;
+            }
             
-            // 작업시간이 짧은 작업 꺼내기
-            do {
-                Job shortestJob = waitingJobs.get(0);
-                total_waiting_time += (time - shortestJob.request_time + shortestJob.task_time);
-                time += shortestJob.task_time;
-            } while ( i < jobs.length - 1 || !waitingJobs.isEmpty() );
+            // 작업시간이 가장 짧은 작업 빼기
+            j = waitingJobs.get(0);
+            waitingJobs.remove(0);
             
-            //System.out.println(shortestJob.toString());
+            if ( !chk ) {
+                total_waiting_time += (time - j.request_time + j.task_time);
+                time += j.task_time;
+            } else {
+                total_waiting_time += j.task_time;
+                time = j.request_time + j.task_time;
+            }
         }
         
         return total_waiting_time / jobs.length;
@@ -53,7 +75,16 @@ class Solution {
         
         @Override
         public String toString() {
-            return "[request_time : " + request_time + ", task_time : " + task_time + "]";
+            return "[" + request_time + ", " + task_time + "]";
         }
+    }
+    
+    public static void sortArray(int[][] arr) {
+        Arrays.sort(arr, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] arr1, int[] arr2) {
+                return arr1[0] - arr2[0];
+            }
+        });
     }
 }

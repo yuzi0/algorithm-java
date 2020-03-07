@@ -17,16 +17,13 @@ class Solution {
                 //System.out.println(n + " " + minimum + " " + word + " " + words[i]);
                 
                 if ( words[i].equals(target) ) {
-                    if ( minimum > n + 1 ) {
-                        minimum = n + 1;
-                        return minimum;    
-                    }
+                    return Math.min(minimum, n + 1);
                 }   
 
-                boolean[] chk_visited = visited;
-                chk_visited[i] = true;
-                int num = dfs(words[i], target, words, chk_visited, n + 1, minimum, maximum);
+                visited[i] = true;
+                int num = dfs(words[i], target, words, visited, n + 1, minimum, maximum);
                 if ( num < minimum ) minimum = num;
+                visited[i] = true;
             }
         }
         
