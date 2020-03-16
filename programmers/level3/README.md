@@ -14,4 +14,4 @@
 2020/03/21 토요일
 - [타일 장식물](https://programmers.co.kr/learn/courses/30/lessons/43104)
 - [베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)
-- [하노이탑](https://programmers.co.kr/learn/courses/30/lessons/12946)
+- [하노이의 탑](https://programmers.co.kr/learn/courses/30/lessons/12946)
