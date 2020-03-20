@@ -6,28 +6,22 @@ import java.util.Arrays;
 class Solution {
     public int[][] solution(int n) {
         ArrayList<int[]> answer = new ArrayList<>();
-        
-        int[][] oddRoutine = new int[][]{{1, 3}, {0, 0}, {3, 2}, {0, 0}, {2, 1}, {0, 0}};
-        int[][] evenRoutine = new int[][]{{1, 2}, {0, 0}, {2, 3}, {0, 0}, {3, 1}, {0, 0}};
-        int[] oddInit = new int[]{1, 3};
-        int[] evenInit = new int[]{1, 2};
-        
         int[][] routine;
         int[] init;
+
+        int[][] oddRoutine = new int[][]{{0, 0}, {1, 3}, {0, 0}, {3, 2}, {0, 0}, {2, 1}, {0, 0}};
+        int[][] evenRoutine = new int[][]{{0, 0}, {1, 2}, {0, 0}, {2, 3}, {0, 0}, {3, 1}, {0, 0}};
+        int[] oddInit = new int[]{1, 3};
+        int[] evenInit = new int[]{1, 2};
         
         answer.add(oddInit);
         
         for (int round = 2; round < n+1; round++) {
             ArrayList<int[]> tmp = new ArrayList<>();
             
-            if (round % 2 != 0) {
-                routine = oddRoutine;
-                init = oddInit;
-            } else {
-                routine = evenRoutine;
-                init = evenInit;
-            }
-            
+            routine = (round % 2 != 0)? oddRoutine : evenRoutine;
+            init = (round % 2 != 0)? oddInit : evenInit;
+        
             tmp.add(init);
             
             for (int i = 2; i < Math.pow(2, round); i++) {
@@ -35,7 +29,7 @@ class Solution {
                     tmp.add(answer.get(0));
                     answer.remove(0);
                 } else {
-                    tmp.add(routine[i % 6 - 1]);
+                    tmp.add(routine[i % 6]);
                 }
             }
             answer = tmp;
