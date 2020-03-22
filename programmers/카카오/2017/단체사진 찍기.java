@@ -39,41 +39,40 @@ class Solution {
     boolean checkData(char[] list) {
         for ( String data : datas ) {
             char chr1 = data.charAt(0);
-            char chr2 = data.charAt(3);
+            char chr2 = data.charAt(2);
             int compareN = data.charAt(4) - '0';
             int N = getDistance(list, chr1, chr2);
             
             
             switch ( data.charAt(3) ) {
                 case '=':
-                    if ( compareN == N ) {
-                        System.out.println(Arrays.toString(list));
-                        continue;
-                    }
+                    if ( N == compareN ) continue;
+                    break;
                 case '<':
-                    if ( compareN < N ) continue;
+                    if ( N < compareN ) continue;
+                    break;
                 case '>':
-                    if ( compareN > N ) continue;
-                default:
-                    return false;
+                    if ( N > compareN ) continue;
+                    break;
             }
-            //System.out.println("chr1 : " + chr1 + ", chr2 : " + chr2 + ", compareN : " + compareN + ", N : " + N);
+            return false;
+            
         }
         return true;
     }
     
     int getDistance(char[] list, char chr1, char chr2) {
-        int n = -1;
+        int distance = -1;
         
         for (int i = 0; i < leng; i++) {
-            if ( n != -1 ) {
-                if ( list[i] == chr1 || list[i] == chr2 ) break;
-                n++;
-            } else if ( list[i] == chr1 || list[i] == chr2 ) {
-                n++;
-            } 
+            if ( distance != -1 ) distance++;
+            
+            if ( list[i] == chr1 || list[i] == chr2 ) {
+                if ( distance == -1 ) distance++;
+                else break;
+            }
         }
         
-        return n;
+        return distance-1;
     }
 }
