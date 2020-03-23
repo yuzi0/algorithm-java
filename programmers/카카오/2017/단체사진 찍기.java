@@ -1,5 +1,4 @@
 // https://programmers.co.kr/learn/courses/30/lessons/1835
-// 실패
 
 import java.util.Arrays;
 

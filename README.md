@@ -33,3 +33,4 @@
 * (03/07) [디스크컨트롤러](https://programmers.co.kr/learn/courses/30/lessons/42627) / [단어변환](https://programmers.co.kr/learn/courses/30/lessons/43163) / [이중우선순위큐](https://programmers.co.kr/learn/courses/30/lessons/42628)
 * (03/21) [타일 장식물](https://programmers.co.kr/learn/courses/30/lessons/43104) / [베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579) /
  [하노이탑](https://programmers.co.kr/learn/courses/30/lessons/12946)
+* (03/28) [브라이언의 고민](https://programmers.co.kr/learn/courses/30/lessons/1830) / [멀리 뛰기](https://programmers.co.kr/learn/courses/30/lessons/12914) / [순위](https://programmers.co.kr/learn/courses/30/lessons/49191)

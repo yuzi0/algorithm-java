@@ -15,3 +15,8 @@
 - [타일 장식물](https://programmers.co.kr/learn/courses/30/lessons/43104)
 - [베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)
 - [하노이의 탑](https://programmers.co.kr/learn/courses/30/lessons/12946)
+
+2020/03/28 토요일
+- [브라이언의 고민](https://programmers.co.kr/learn/courses/30/lessons/1830)
+- [멀리 뛰기](https://programmers.co.kr/learn/courses/30/lessons/12914)
+- [순위](https://programmers.co.kr/learn/courses/30/lessons/49191)
