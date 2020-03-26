@@ -8,11 +8,13 @@ class Solution {
         
         if ( n == 1 ) return 1;
         
-        // 점수판 생성
+        // 기본 점수판 생성
         for ( int[] result : results ) {
             scores[result[0]-1][result[1]-1] = 1;
             scores[result[1]-1][result[0]-1] = -1;
         }
+        
+        // dfs를 통해서 점수판을 다 채운 후, 등수가 변하는지 확인한다
         
         return answer;
     }
