@@ -12,11 +12,7 @@ class Solution {
         
         // 장르에 따른 총 재생 수 구하기
         for (int i = 0; i < len; i++) {
-            if (genre_play.containsKey(genres[i])) {
-                genre_play.put(genres[i], genre_play.get(genres[i]) + plays[i]);
-            } else {
-                genre_play.put(genres[i], plays[i]);
-            }
+            genre_play.put(genres[i], genre_play.getOrDefault(genres[i], 0) + plays[i]);
         }
 
         // 재생 수에 대한 장르 정렬
@@ -57,7 +53,7 @@ class Solution {
                 musicList.remove(0);
             }
         }
-        =
+        
         return toIntArray(answer);
     }
     
