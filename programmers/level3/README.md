@@ -17,6 +17,11 @@
 - [하노이의 탑](https://programmers.co.kr/learn/courses/30/lessons/12946)
 
 2020/03/28 토요일
-- [브라이언의 고민](https://programmers.co.kr/learn/courses/30/lessons/1830)
+- [실패][브라이언의 고민](https://programmers.co.kr/learn/courses/30/lessons/1830)
 - [멀리 뛰기](https://programmers.co.kr/learn/courses/30/lessons/12914)
-- [순위](https://programmers.co.kr/learn/courses/30/lessons/49191)
+- [실패][순위](https://programmers.co.kr/learn/courses/30/lessons/49191)
+
+2020/04/04 토요일
+- [Lv3 등굣길](https://programmers.co.kr/learn/courses/30/lessons/42898)
+- [Lv3 최고의집합](https://programmers.co.kr/learn/courses/30/lessons/12938)
+- [Lv3 여행경로](https://programmers.co.kr/learn/courses/30/lessons/43164)
