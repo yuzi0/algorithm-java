@@ -22,6 +22,11 @@
 - [실패][순위](https://programmers.co.kr/learn/courses/30/lessons/49191)
 
 2020/04/04 토요일
-- [Lv3 등굣길](https://programmers.co.kr/learn/courses/30/lessons/42898)
-- [Lv3 최고의집합](https://programmers.co.kr/learn/courses/30/lessons/12938)
-- [Lv3 여행경로](https://programmers.co.kr/learn/courses/30/lessons/43164)
+- [실패][등굣길](https://programmers.co.kr/learn/courses/30/lessons/42898)
+- [최고의집합](https://programmers.co.kr/learn/courses/30/lessons/12938)
+- [실패][여행경로](https://programmers.co.kr/learn/courses/30/lessons/43164)
+
+2020/04/11 토요일
+- [배달](https://programmers.co.kr/learn/courses/30/lessons/12978)
+- [섬 연결하기](https://programmers.co.kr/learn/courses/30/lessons/42861)
+- [단속카메라](https://programmers.co.kr/learn/courses/30/lessons/42884)
