@@ -22,9 +22,9 @@
 - [실패][순위](https://programmers.co.kr/learn/courses/30/lessons/49191)
 
 2020/04/04 토요일
-- [실패][등굣길](https://programmers.co.kr/learn/courses/30/lessons/42898)
+- [등굣길](https://programmers.co.kr/learn/courses/30/lessons/42898)
 - [최고의집합](https://programmers.co.kr/learn/courses/30/lessons/12938)
-- [실패][여행경로](https://programmers.co.kr/learn/courses/30/lessons/43164)
+- [여행경로](https://programmers.co.kr/learn/courses/30/lessons/43164)
 
 2020/04/11 토요일
 - [배달](https://programmers.co.kr/learn/courses/30/lessons/12978)
