@@ -34,5 +34,5 @@
 * (03/21) [타일 장식물](https://programmers.co.kr/learn/courses/30/lessons/43104) / [베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579) /
  [하노이탑](https://programmers.co.kr/learn/courses/30/lessons/12946)
 * (03/28) [브라이언의 고민](https://programmers.co.kr/learn/courses/30/lessons/1830) / [멀리 뛰기](https://programmers.co.kr/learn/courses/30/lessons/12914) / [순위](https://programmers.co.kr/learn/courses/30/lessons/49191)
-* (04/04) [Lv3 등굣길](https://programmers.co.kr/learn/courses/30/lessons/42898) / [Lv3 최고의집합](https://programmers.co.kr/learn/courses/30/lessons/12938) / [Lv3 여행경로](https://programmers.co.kr/learn/courses/30/lessons/43164)
+* (04/04) [등굣길](https://programmers.co.kr/learn/courses/30/lessons/42898) / [최고의집합](https://programmers.co.kr/learn/courses/30/lessons/12938) / [여행경로](https://programmers.co.kr/learn/courses/30/lessons/43164)
 * (04/11) [배달](https://programmers.co.kr/learn/courses/30/lessons/12978) / [섬 연결하기](https://programmers.co.kr/learn/courses/30/lessons/42861) / [단속카메라](https://programmers.co.kr/learn/courses/30/lessons/42884)
