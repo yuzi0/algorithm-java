@@ -5,54 +5,50 @@
 // 새로운 로그가 추가될 때마다, 새 로그의 시작 시간이랑 queue의 끝나는 시간을 비교해서 시간이 1초 이상 차이나면 queue에서 뺀다.
 // queue의 최대 크기를 기록해놓고 queue의 사이즈가 0이 되면, 최대 크기를 반환한다.
 
-// 실패 : 63.6점
+// 실패 : 81.8점
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Date;
+import java.util.Calendar;
+import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.text.ParseException;
+import java.util.Collections;
 
-class MaxTraffic {
-	public int maxTraffic(String[] lines) {
+class Solution {
+	public int solution(String[] lines) {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
-		PriorityQueue<Long> pq = new PriorityQueue<>();
+		PriorityQueue<Long> pq = new PriorityQueue<>(Collections.reverseOrder());
 		int max = 0;
-
-		System.out.println(Arrays.toString(lines));
 		
-		for (String line : lines) {
-			String datetime = line.substring(0, 23);
-			int millisec = (int) (Float.valueOf(line.substring(24, line.length() - 1)) * 1000);
+		for (int i = lines.length - 1; i >= 0; i--) {
+			String datetime = lines[i].substring(0, 23);
+			int millisec = (int) (Float.valueOf(lines[i].substring(24, lines[i].length() - 1)) * 1000);
 			
 			Calendar cal = Calendar.getInstance();
 			Timestamp original = convertStringToTimestamp(datetime, formatter);
 			cal.setTimeInMillis(original.getTime());
-			Long now = (new Timestamp(cal.getTime().getTime())).getTime();
+			Long end = (new Timestamp(cal.getTime().getTime())).getTime();
 			
-			cal.add(Calendar.MILLISECOND, millisec);
-			Long later = (new Timestamp(cal.getTime().getTime())).getTime();
-			
-			System.out.println("Now " + now + " : " + datetime);
-			System.out.println("Aft " + later + " : " + millisec);
-			
+			cal.add(Calendar.MILLISECOND, -(millisec - 1));
+			Long start = (new Timestamp(cal.getTime().getTime())).getTime();
+
 			while (true) {
-				if ((pq.isEmpty()) || (Math.abs(pq.peek() - now) < 999)) {
+				if ((pq.isEmpty()) || (pq.peek() - end < 1000)) {
 					break;
 				}
 				pq.poll();
 			}
 
-			pq.add(later);
+			pq.add(start);
 
 			if (pq.size() > max) {
 				max = pq.size();
 			}
 		}
 
-		System.out.println();
 		return max;
+
 	}
 
 	public static Timestamp convertStringToTimestamp(String str_date, SimpleDateFormat formatter) {
