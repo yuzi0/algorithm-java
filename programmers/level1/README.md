@@ -54,3 +54,6 @@
 - 행렬의 덧셈
 - x만큼 간격이 있는 n개의 숫자
 - 직사각형 별찍기
+
+2020/05/09 토요일
+- [크레인 인형뽑기 게임](https://programmers.co.kr/learn/courses/30/lessons/64061)
