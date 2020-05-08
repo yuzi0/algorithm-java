@@ -38,3 +38,4 @@
 * (04/11) [배달](https://programmers.co.kr/learn/courses/30/lessons/12978) / [섬 연결하기](https://programmers.co.kr/learn/courses/30/lessons/42861) / [단속카메라](https://programmers.co.kr/learn/courses/30/lessons/42884)
 * (04/18) [N으로 표현](https://programmers.co.kr/learn/courses/30/lessons/42895) / [2 X n 타일링](https://programmers.co.kr/learn/courses/30/lessons/12900) / [종이접기](https://programmers.co.kr/learn/courses/30/lessons/62049)
 * (05/02) [[1차] 추석 트래픽](https://programmers.co.kr/learn/courses/30/lessons/17676) / [가장 먼 노드](https://programmers.co.kr/learn/courses/30/lessons/49189) / [거스름돈](https://programmers.co.kr/learn/courses/30/lessons/12907)
+* (05/09) [예산](https://programmers.co.kr/learn/courses/30/lessons/43237) / [크레인 인형뽑기 게임](https://programmers.co.kr/learn/courses/30/lessons/64061) / [입국심사](https://programmers.co.kr/learn/courses/30/lessons/43238)
