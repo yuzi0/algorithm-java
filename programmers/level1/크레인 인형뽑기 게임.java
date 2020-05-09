@@ -11,7 +11,7 @@ class Solution {
         
         for(int[] b : board) {
             for(int i = 0; i < b.length; i++) {
-                if (b[i] != 0) {
+                if (b[i] > 0) {
                     loc[i]++;
                 }
             }
@@ -20,18 +20,13 @@ class Solution {
         for(int move : moves) {
             move--;
             if (loc[move] > 0) {
-                if (!bucket.isEmpty()) {
-                    if (bucket.peek() != board[move][heigth - loc[move]]) {
-                        bucket.push(board[move][heigth - loc[move]]);
-                        loc[move]--;   
-                    } else {
-                        bucket.pop();
-                        answer += 2;
-                    }
+                if (!bucket.isEmpty() && (bucket.peek() == board[heigth - loc[move]][move])) {
+                    bucket.pop();
+                    answer += 2;
                 } else {
-                    bucket.push(board[move][heigth - loc[move]]);
-                    loc[move]--;
+                    bucket.push(board[heigth - loc[move]][move]);
                 }
+                loc[move]--;
             }
         }
             
