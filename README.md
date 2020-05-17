@@ -39,3 +39,5 @@
 * (04/18) [N으로 표현](https://programmers.co.kr/learn/courses/30/lessons/42895) / [2 X n 타일링](https://programmers.co.kr/learn/courses/30/lessons/12900) / [종이접기](https://programmers.co.kr/learn/courses/30/lessons/62049)
 * (05/02) [[1차] 추석 트래픽](https://programmers.co.kr/learn/courses/30/lessons/17676) / [가장 먼 노드](https://programmers.co.kr/learn/courses/30/lessons/49189) / [거스름돈](https://programmers.co.kr/learn/courses/30/lessons/12907)
 * (05/09) [예산](https://programmers.co.kr/learn/courses/30/lessons/43237) / [크레인 인형뽑기 게임](https://programmers.co.kr/learn/courses/30/lessons/64061) / [입국심사](https://programmers.co.kr/learn/courses/30/lessons/43238)
+* (05/16) [불량 사용자](https://programmers.co.kr/learn/courses/30/lessons/64064) / [저울](https://programmers.co.kr/learn/courses/30/lessons/42886) / [[1차] 셔틀버스](https://programmers.co.kr/learn/courses/30/lessons/17678)
+* (05/23) [정수 삼각형](https://programmers.co.kr/learn/courses/30/lessons/43105) / [기둥과 보 설치](https://programmers.co.kr/learn/courses/30/lessons/60061) / [줄 서는 방법](https://programmers.co.kr/learn/courses/30/lessons/12936)
